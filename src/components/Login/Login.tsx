@@ -63,21 +63,21 @@ const Login: React.FC = () => {
                 id="email"
                 value={email}
                 onChange={handleEmailChange}
-                placeholder='12'
+                placeholder='Электронная почта'
                 required
             />
             <Input
                 type={showPassword ? 'text' : 'password'}
                 id="password"
                 value={password}
-                placeholder='12'
+                placeholder='Пароль'
                 onChange={handlePasswordChange}
                 required
             />
+            </form>
             <Link link="/">Забыли пароль?</Link>
             <Button disabled={!isFormValid} />
             <Link link="/">Зарегистрироваться</Link>
-            </form>
     </div>
   );
 };

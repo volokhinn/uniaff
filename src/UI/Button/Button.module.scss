@@ -1,0 +1,18 @@
+.btn {
+    margin: 56px 0 30px 0;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #34C759;
+    transition: .3s;
+
+    &:disabled {
+        background-color: #AFBAC5;
+        cursor: no-drop;
+    }
+}
