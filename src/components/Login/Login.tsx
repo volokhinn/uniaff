@@ -98,9 +98,9 @@ const Login: React.FC = () => {
           required
           errorMessage={passwordError}
         />
-        <Button disabled={!isFormValid} />
       </form>
       <Link link="/">Забыли пароль?</Link>
+      <Button disabled={!isFormValid} />
       <Link link="/">Зарегистрироваться</Link>
     </div>
   );
