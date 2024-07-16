@@ -1,3 +1,8 @@
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
 .input {
     padding: 15px 50px;
     border: 1px solid #AFBAC5;
@@ -5,4 +10,39 @@
     border-radius: 8px;
     outline: none;
     font-size: 20px;
+    width: calc(100% - 100px)
+}
+
+.password {
+    &_eye {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        position: absolute;
+        top: 17px;
+        right: 13px;
+        
+        & img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.mail::before, .password::before {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 17px;
+    width: 20px;
+    height: 20px;
+}
+
+.mail::before {
+    background-image: url('../../assets//icons/mail.svg');
+}
+
+.password::before {
+    background-image: url('../../assets//icons/password.svg');
 }

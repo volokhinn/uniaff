@@ -8,7 +8,6 @@ import styles from './Login.module.scss'
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
 
   const validateEmail = (email: string) => {
@@ -30,10 +29,6 @@ const Login: React.FC = () => {
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
     setIsFormValid(validateEmail(email) && validatePassword(e.target.value));
-  };
-
-  const toggleShowPassword = () => {
-    setShowPassword(!showPassword);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -67,7 +62,7 @@ const Login: React.FC = () => {
                 required
             />
             <Input
-                type={showPassword ? 'text' : 'password'}
+                type="password"
                 id="password"
                 value={password}
                 placeholder='Пароль'
