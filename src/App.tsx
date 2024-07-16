@@ -1,8 +1,9 @@
 import Login from "./components/Login/Login";
+import './index.css'
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <Login />
     </div>
   );

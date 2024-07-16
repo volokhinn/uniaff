@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Title.module.scss'
 
 interface TitleProps {
   children: React.ReactNode;
@@ -6,7 +7,7 @@ interface TitleProps {
 
 const Title: React.FC<TitleProps> = ({ children }) => {
   return (
-    <h1>{children}</h1>
+    <h1 className={styles.title}>{children}</h1>
   );
 };
 
