@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Input.module.scss';
 import eye from '../../assets/icons/eye.svg';
 import eyeclose from '../../assets/icons/eyeclose.svg';
+import '../../index.css'
 
 interface InputProps {
   type: string;
@@ -10,9 +11,10 @@ interface InputProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
   required?: boolean;
+  errorMessage?: string;
 }
 
-const Input: React.FC<InputProps> = ({ type, id, value, onChange, placeholder, required }) => {
+const Input: React.FC<InputProps> = ({ type, id, value, onChange, placeholder, required, errorMessage }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const toggleShowPassword = () => {
@@ -39,6 +41,7 @@ const Input: React.FC<InputProps> = ({ type, id, value, onChange, placeholder, r
           <img src={showPassword ? eyeclose : eye} alt="eye" />
         </button>
       )}
+      {errorMessage && <div className='error'>{errorMessage}</div>}
     </div>
   );
 };

@@ -16,3 +16,8 @@ code {
   margin: 0 auto;
   padding: 0 30px;
 }
+
+.error {
+  margin-top: 10px;
+  color: red;
+}
