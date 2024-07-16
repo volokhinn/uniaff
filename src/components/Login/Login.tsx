@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Title from '../../UI/Title/Title';
 import Input from '../../UI/Input/Input';
+import Button from '@/UI/Button/Button';
 import styles from './Login.module.scss'
 
 const Login: React.FC = () => {
